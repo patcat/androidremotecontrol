@@ -1,0 +1,444 @@
+.deck-container {
+	font-family: "OpenSans", Arial, sans-serif;
+	font-weight: 100;
+	font-size: 1.75em;
+	color: #fff;
+	background: #000;
+	
+	.slide {
+		h1 {
+			top: 40%;
+		}
+
+		.title {
+			padding: 0 1em;
+
+			.title-text {
+				background-color: #ff8b3e;
+				color: #fff;
+				font-size: 3em;
+				font-weight: normal;
+				font-weight: 100;
+				text-shadow: 1px 1px 2px #000;
+				padding: 0 0.25em 0.25em;
+			}
+
+			.byline {
+				color: #fff;
+				font-size: 1.85em;
+				text-align: right;
+
+				a {
+					color: #f60;
+				}
+			}
+		}
+
+		h2 {
+			color: #fff;
+			font-weight: normal;
+			font-weight: 100;
+			border: none;
+		}
+
+		h3 {
+			color: #fff;
+			font-weight: normal;
+			font-weight: 100;
+			text-shadow: 0 0 10px #fff, 0 0 2px #fff;
+		}
+
+		pre {
+			border-color: #333;
+
+			code {
+				color: #fff;
+			}
+		}
+
+		code {
+			color: #f0a;
+		}
+
+		blockquote {
+			font-size: 2em;
+			padding: 1em 2em;
+			color: #fff;
+			border-left: 5px solid #fff;
+
+			p {
+				margin: 0;
+			}
+
+			cite {
+				font-size: .5em;
+				font-style: normal;
+				font-weight: normal;
+				font-weight: 100;
+				color: #aaa;
+				text-shadow: 0 0 15px #fff, 0 0 2px #fff;
+			}
+		}
+
+		:-moz-selection{ background: #a0f; }
+		:selection { background: #a0f; }
+
+		a {
+			&, &:hover, &:focus, &:active, &:visited {
+				color: #000;
+				text-decoration: none;
+				font-weight: 100;
+			}
+
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+		}
+
+		.v-center {
+			.csstransforms & {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 50%;
+				-webkit-transform: translate(0, -50%);
+				-moz-transform: translate(0, -50%);
+				-ms-transform: translate(0, -50%);
+				-o-transform: translate(0, -50%);
+				transform: translate(0, -50%);
+			}
+		}
+	}
+
+	/* -------------------
+	 *	Slide specifics
+	 * ------------------- */
+	.yeoldweb {
+		background-color: #fff;
+		font-family: serif;
+		color: #000;
+
+		table {
+			border-collapse: separate;
+			border-spacing: 2px;
+			border-color: gray;
+
+			td {
+				border: 3px ridge #ddd;
+				margin: 10px;
+				padding: 10px;
+			}
+		}
+	}
+	
+	.slide-nice {
+		text-align: center;
+
+		p, button, img {
+			padding: 0.5em;
+		}
+
+		.btn {
+			transition: 0.5s all;
+			color: #fff;
+			display: block;
+			border-radius: 3px;
+			font-size: 1.4em;
+			text-shadow: 1px 1px 1px #000;
+			margin: 0.25em auto;
+			width: 33%;
+		}
+
+		.btn-red {
+			background: #f00;
+			border: 1px solid #c80000;
+			box-shadow: inset 0px 3px 2px #ff5b4d;
+
+			&:hover {
+				background: #c80000;
+				box-shadow: inset 0px 3px 2px #aa0700;
+			}
+		}
+
+		.btn-blue {
+			background: #0042b3;
+			border: 1px solid #001ba1;
+			box-shadow: inset 0px 3px 2px #000cff;
+
+			&:hover {
+				background: #001ba1;
+				box-shadow: inset 0px 3px 2px #001061;
+			}
+		}
+
+		.btn-orange {
+			background: #f60;
+			border: 1px solid #cd5200;
+			box-shadow: inset 0px 3px 2px #ffa979;
+
+			&:hover {
+				background: #cd5200;
+				box-shadow: inset 0px 3px 2px #9b3e00;
+			}
+		}
+	}
+
+	.slide-white {
+		background-color: white;
+	}
+
+	.slide-regular-bg {
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-size: cover;
+			z-index: -1;
+		}
+	}
+
+	.slide-blur-bg {
+		color: #fff;
+		background-color: #fff;
+		text-shadow: 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 4px #fff;
+		font-size: 1.5em;
+		text-align: center;
+
+		p {
+			margin: 1em 2em;
+			font-weight: normal;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-size: cover;
+			z-index: -1;
+
+			filter: blur(10px);
+			-webkit-filter: blur(15px);
+			-moz-filter: blur(10px);
+			-o-filter: blur(10px);
+			-ms-filter: blur(10px);
+			scale: 0.5;
+			-webkit-scale: 0.5;
+
+			opacity: 0.5;
+
+			transition: 0.25s all;
+		}
+
+		&.deck-current:after {
+			filter: blur(0);
+			-webkit-filter: blur(0);
+			-moz-filter: blur(0);
+			-o-filter: blur(0);
+			-ms-filter: blur(0);
+
+			opacity: 1;
+		}
+	}
+
+	.slide-node {
+		color: #333;
+		text-shadow: 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 4px #fff;
+		
+		&:after {
+			background: url(../../../images/node.png) center center no-repeat #47493e;
+		}
+	}
+	
+	.slide-jquery {
+		background-color: #131b28;
+	}
+
+	.slide-ninjablocks {
+		color: #333;
+		text-shadow: 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 4px #fff;
+		
+		&:after {
+			background: url(../../../images/ninjablocks.jpg) center center no-repeat #fff;
+		}
+	}
+
+	.slide-tessel {
+		color: #d54a44;
+		text-shadow: 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 4px #fff;
+		
+
+		&:after {
+			background: url(../../../images/tessel-press.jpg) top left no-repeat #fff;
+		}
+	}
+
+	.slide-arduino {
+		color: #004a68;
+		text-shadow: 0px 0px 4px #fff, 0px 0px 4px #fff, 0px 0px 4px #fff;
+
+		&:after {
+			background: url(../../../images/arduino.jpg) center center no-repeat #fff;
+		}
+	}
+
+	.slide-wearscript {
+		color: #0c0068;
+
+		&:after {
+			background: url(../../../images/wearscript.png) top left no-repeat #fff;
+			background-size: 100% auto;
+		}
+	}
+
+	.slide-leapmotion {
+		color: #682400;
+
+		&:after {
+			background: url(../../../images/leapmotion.jpg) bottom right no-repeat #fff;
+		}
+	}
+
+	.slide-pushover {
+		color: #0c0068;
+
+		&:after {
+			background: url(../../../images/pushover.png) top center no-repeat #fff;
+		}
+	}
+
+	.slide-onx {
+		color: #0c0068;
+
+		&:after {
+			background: url(../../../images/onx.png) top center no-repeat #fff;
+			background-size: 100% auto;
+		}
+	}
+
+	.slide-xndme {
+		color: #0c0068;
+
+		&:after {
+			background: url(../../../images/xndme.png) top left no-repeat #fff;
+			background-size: 100% auto;
+			opacity: 0.15;
+		}
+	}
+
+	.slide-tweets {
+		overflow-y: scroll;
+
+		.tweets {
+			height: 100%;
+			overflow-y: scroll;
+		}
+	}
+
+	.slide-resources {
+		a {
+			&, &:hover, &:focus, &:active, &:visited {
+				color: #f60;
+			}
+		}
+	}
+
+	.deck-prev-link, .deck-next-link {
+		opacity: 0;
+	}
+	
+	> .slide {
+		.deck-before, .deck-previous {
+			opacity: 0.4;
+			
+			&:not(.deck-child-current) {
+				.deck-before, .deck-previous {
+					opacity: 1;
+				}
+			}
+		}
+		
+		.deck-child-current {
+			opacity: 1;
+		}
+	}
+	
+	.deck-status {
+		font-size: 0.6666em;
+	}
+	
+	.goto-form {
+		background: #000;
+		border: 1px solid #f0a;
+		
+		label {
+			color: #fff;
+		}
+	}
+	
+	&.deck-menu {
+		.slide {
+			background: #333;
+		}
+		
+		.deck-current {
+			background: #444;
+			
+			.boxshadow & {
+				background: #000;
+				-webkit-box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+				-moz-box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+				box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+			}
+		}
+		
+		.no-touch & .slide:hover {
+			background: #444;
+		}
+		
+		.no-touch.boxshadow & .slide:hover {
+			background: #000;
+			-webkit-box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+			-moz-box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+			box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+		}
+	}
+}
+
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('fonts/OpenSans-Light-webfont.eot');
+	src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+		 url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+		 url('fonts/OpenSans-Light-webfont.svg#opensans') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('fonts/OpenSans-Regular-webfont.eot');
+	src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+		 url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+		 url('fonts/OpenSans-Regular-webfont.svg#opensans') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('fonts/OpenSans-Semibold-webfont.eot');
+	src: url('fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+		 url('fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+		 url('fonts/OpenSans-Semibold-webfont.svg#opensans') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
