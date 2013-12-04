@@ -32,7 +32,7 @@ server.listen(port, function() {
  *  no specific response to a GET or POST request.
  *
  * ------------------------------------------------------ */
-io.configure(function () {
+io.configure(function() {
 	io.set("transports", ["xhr-polling"]);
 	io.set("polling duration", 10);
 });
