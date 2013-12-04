@@ -1,6 +1,12 @@
 {
 	"name": "androidremotecontrol",
+	"author": "Patrick Catanzariti",
 	"version": "0.0.1",
+	"homepage": "http://androidremotecontrol.herokuapp.com",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/patcat/androidremotecontrol.git"
+	},
 	"dependencies": {
 		"express": "3.1.x",
 		"socket.io": "latest"

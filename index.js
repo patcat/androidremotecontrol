@@ -1,3 +1,11 @@
+/* ------------------------------------------------------
+ * 
+ *  Android Remote Control
+ *  	- an on{X} and Socket.IO powered Deck.JS slide controller demo in action at http://androidremotecontrol.herokuapp.com/
+ *  	- Coded up by Patrick Catanzariti (http://www.patcat.me)
+ *
+ * ------------------------------------------------------ */
+
 var http = require("http"),
 	express = require("express"),
 	app = express(),
